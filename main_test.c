@@ -6,7 +6,7 @@
 /*   By: aalleon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 16:51:18 by aalleon           #+#    #+#             */
-/*   Updated: 2021/11/25 16:44:19 by aalleon          ###   ########.fr       */
+/*   Updated: 2021/11/26 12:22:43 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ int main()
 	tot += test_memcpy();
 	tot += test_memmove();
 	tot += test_memchr();
+	tot += test_bzero();
+	tot += test_strnstr();
 	return 0;
 }
