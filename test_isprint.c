@@ -6,12 +6,13 @@
 /*   By: aalleon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:04:48 by aalleon           #+#    #+#             */
-/*   Updated: 2021/11/24 16:05:31 by aalleon          ###   ########.fr       */
+/*   Updated: 2021/12/01 16:37:33 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include "tests.h"
 
 int test_isprint()
 {
@@ -22,34 +23,34 @@ int test_isprint()
 	int res;
 
 	res = 1;
-	printf("ft_isprint\n");
+	print_header("ft_isprint\n");
 	if (!ft_isprint(a))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (!ft_isprint(b))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (ft_isprint(c))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (ft_isprint(d))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	return res;
 }

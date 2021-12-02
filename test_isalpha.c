@@ -6,12 +6,13 @@
 /*   By: aalleon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 16:56:19 by aalleon           #+#    #+#             */
-/*   Updated: 2021/11/24 15:28:12 by aalleon          ###   ########.fr       */
+/*   Updated: 2021/12/02 12:14:15 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include "tests.h"
 
 int test_isalpha()
 {
@@ -21,27 +22,27 @@ int test_isalpha()
 	int res;
 
 	res = 1;
-	printf("ft_isalpha\n");
+	print_header("ft_isalpha\n");
 	if (!ft_isalpha(a))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (ft_isalpha(b))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (ft_isalpha(c))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	return res;
 }

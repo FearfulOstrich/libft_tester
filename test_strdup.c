@@ -6,7 +6,7 @@
 /*   By: aalleon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:45:10 by aalleon           #+#    #+#             */
-/*   Updated: 2021/11/26 16:37:25 by aalleon          ###   ########.fr       */
+/*   Updated: 2021/12/01 16:22:21 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "tests.h"
 
 int test_strdup()
 {
@@ -22,16 +23,16 @@ int test_strdup()
 	char	*str_ref;
 
 	res = 1;
-	printf("ft_strdup\n");
+	print_header("ft_strdup\n");
 	str_ref = strdup("Bonsoir");
 	str = ft_strdup("Bonsoir");
 	if (strcmp(str_ref, str))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	free(str);
 	free(str_ref);
 	return res;

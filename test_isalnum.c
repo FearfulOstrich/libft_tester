@@ -6,12 +6,13 @@
 /*   By: aalleon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:05:42 by aalleon           #+#    #+#             */
-/*   Updated: 2021/11/24 15:37:18 by aalleon          ###   ########.fr       */
+/*   Updated: 2021/12/01 16:02:21 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include "tests.h"
 
 int test_isalnum()
 {
@@ -22,34 +23,34 @@ int test_isalnum()
 	int res;
 
 	res = 1;
-	printf("ft_isalnum\n");
+	print_header("ft_isalnum\n");
 	if (!ft_isalnum(a))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (!ft_isalnum(b))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (!ft_isalnum(c))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (ft_isalnum(d))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	return res;
 }

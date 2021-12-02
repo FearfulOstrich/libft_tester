@@ -6,12 +6,13 @@
 /*   By: aalleon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 16:56:19 by aalleon           #+#    #+#             */
-/*   Updated: 2021/11/24 15:49:19 by aalleon          ###   ########.fr       */
+/*   Updated: 2021/12/01 16:37:01 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include "tests.h"
 
 int test_isascii()
 {
@@ -22,34 +23,34 @@ int test_isascii()
 	int res;
 
 	res = 1;
-	printf("ft_isascii\n");
+	print_header("ft_isascii\n");
 	if (!ft_isascii(a))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (!ft_isascii(b))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (!ft_isascii(c))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (ft_isascii(d))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	return res;
 }

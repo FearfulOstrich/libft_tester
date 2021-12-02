@@ -6,13 +6,14 @@
 /*   By: aalleon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:45:10 by aalleon           #+#    #+#             */
-/*   Updated: 2021/11/25 15:46:11 by aalleon          ###   ########.fr       */
+/*   Updated: 2021/12/01 16:16:27 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
+#include "tests.h"
 
 int test_memmove()
 {
@@ -24,25 +25,25 @@ int test_memmove()
 	int 	cpt;
 
 	res = 1;
-	printf("ft_memmove\n");
+	print_header("ft_memmove\n");
 	memmove(str_ref + 4, str_ref, 7);
 	ft_memmove(str + 4, str, 7);
 	if (strcmp(str_ref, str))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	memmove(str_ref, str_ref + 1, 3);
 	ft_memmove(str, str + 1, 3);
 	if (strcmp(str_ref, str))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	cpt = 0;
 	while (cpt < 10)
 	{
@@ -55,16 +56,16 @@ int test_memmove()
 	if (tab[2] != tab_ref[2])
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (tab[6] != tab_ref[6])
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	return res;
 }

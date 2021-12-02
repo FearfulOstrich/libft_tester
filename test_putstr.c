@@ -1,53 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_toupper.c                                     :+:      :+:    :+:   */
+/*   test_putstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalleon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 16:22:18 by aalleon           #+#    #+#             */
-/*   Updated: 2021/12/01 16:38:41 by aalleon          ###   ########.fr       */
+/*   Created: 2021/12/02 17:04:45 by aalleon           #+#    #+#             */
+/*   Updated: 2021/12/02 17:27:44 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
 #include "tests.h"
+#include "libft.h"
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
 
-int test_toupper()
+int	test_putstr()
 {
 	int res;
+	int	fd;
+	char *s;
 
-	res = 1;
-	print_header("ft_toupper\n");
-	if (ft_toupper('o') != toupper('o'))
-	{	
+	res = 0;
+	print_header("ft_putstr_fd\n");
+	fd = open("tmp", O_RDWR | O_CREAT);
+	ft_putstr_fd("toto", fd);
+	s = ft_calloc(5, sizeof(*s));
+	read(fd, s, 4);
+	if (!strcmp(s, "toto"))
+	{
 		res *= 0;
 		print_test(0);
 	}
 	else
 		print_test(1);
-	if (ft_toupper('L') != toupper('L'))
-	{	
-		res *= 0;
-		print_test(0);
-	}
-	else
-		print_test(1);
-	if (ft_toupper('0') != toupper('0'))
-	{	
-		res *= 0;
-		print_test(0);
-	}
-	else
-		print_test(1);
-	if (ft_toupper('u') != toupper('u'))
-	{	
-		res *= 0;
-		print_test(0);
-	}
-	else
-		print_test(1);
-	return res;
+	return (res);
 }

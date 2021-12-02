@@ -6,47 +6,48 @@
 /*   By: aalleon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:24:36 by aalleon           #+#    #+#             */
-/*   Updated: 2021/11/24 16:25:03 by aalleon          ###   ########.fr       */
+/*   Updated: 2021/12/01 16:35:24 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <ctype.h>
+#include "tests.h"
 
 int test_tolower()
 {
 	int res;
 
 	res = 1;
-	printf("ft_tolower\n");
+	print_header("ft_tolower\n");
 	if (ft_tolower('o') != tolower('o'))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (ft_tolower('L') != tolower('L'))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (ft_tolower('\n') != tolower('\n'))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	if (ft_tolower('U') != tolower('U'))
 	{	
 		res *= 0;
-		printf("\tKO.\n");
+		print_test(0);
 	}
 	else
-		printf("\tOK.\n");
+		print_test(1);
 	return res;
 }
