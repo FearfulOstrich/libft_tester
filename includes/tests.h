@@ -54,4 +54,7 @@ int	test_lstnew();
 int	test_lstadd_front();
 int	test_lstsize();
 int	test_lstlast();
+int	test_lstadd_back();
+int	test_lstdelone();
+int	test_lstclear();
 #endif

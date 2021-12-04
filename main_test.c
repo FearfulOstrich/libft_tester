@@ -54,5 +54,8 @@ int main()
 	tot += test_lstadd_front();
 	tot += test_lstsize();
 	tot += test_lstlast();
+	tot += test_lstadd_back();
+	//tot += test_lstdelone();
+	tot += test_lstclear();
 	return 0;
 }
